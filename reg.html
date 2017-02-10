@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+  </style>
+
+<script type="text/javascript">
+ function func()
+{
+	var fn=document.getElementById("fn").value;
+	var ln=document.getElementById("ln").value;
+	 var e=document.getElementById("eid1").value;
+	
+	 var flag=0,flag1=0,i;
+	 for(i=0;i<fn.length;i++)
+	 {
+	 if(fn.charCodeAt(i)>=48&&fn.charCodeAt(i)<=57)
+	 {
+	 flag=1;
+	 break;
+	 }
+	 }
+	 for(i=0;i<ln.length;i++)
+	 {
+	 if(ln.charCodeAt(i)>=48&&ln.charCodeAt(i)<=57)
+	 {
+	 flag1=1;
+	 break;
+	 }
+	 }
+	
+	if(flag==1)
+	 {
+	 alert("First Name cannot have numbers");
+	 return false;
+	 }
+	 if(flag1==1)
+	 {
+	 alert("Last Name cannot have numbers");
+	 return false;
+	}
+
+     if((e.indexOf("@"))<=0||(e.indexOf("."))<=0)
+	    {
+		  alert("Enter a valid email address");
+		  return false;
+	    }
+		if(((e.lastIndexOf("."))-(e.lastIndexOf("@")))<=1)
+		{
+		  alert("Enter a valid email address");
+		  return false;
+		  }
+		  if((e.lastIndexOf("."))==((e.length)-1))
+		  {
+		  alert("Enter a valid email address");
+		  return false;
+		  }
+	
+
+	  	    }
+		
+	   
+
+</script>
+
+ </head>
+  
+  
+  <body onsubmit="return func()"> 
+<img src="img/logo.jpg"  style="width:300px;height:300px align="left"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b  style="color:black;font-size:300%"><i>TRENDY TRAVELS</i> </b>
+    
+
+
+ <div class="container">
+	 
+     <form method="post" action="timings.html">
+         
+             
+             <h4>First Name :</h4> 
+             <input type="text" name="fname" id="fn" size="50" required/> *
+             <br><br>
+              
+             <h4>Last Name : </h4>
+             <input type="text" name="lname" id="ln" size="50" required/> *
+             <br><br>
+
+           
+            
+
+			 
+			 
+           <h4>Email : </h4>
+             <input type="text" name="email" id="eid1" size="50" required/> *
+             <br><br>
+
+<h4> Password :</h4>
+<input type="password" value="password" size="50" required/>*
+ <br><br>
+   <h4>Address: </h4>
+             <input type="text" name="addr" id="add" size="50" required/> *
+             <br><br>
+
+
+
+
+		    <h4>Gender :</h4> *
+             <input type="radio" name="gender" value="male" required><b>Male</b></input>
+             <input type="radio" name="gender" value="female"><b>Female</b></input>
+             <br><br>
+
+	            
+	         <input type="submit" value="Submit"/><br>
+	
+	        </form>
+<footer>Copyright &copy; trendytours.com</footer>
+<br>
+<br>
+<br>
+<br>
+\<br>
+</div>
+</body>
+</html>
+
